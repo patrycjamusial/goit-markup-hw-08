@@ -1,0 +1,35 @@
+@use "../utils/variables" as *;
+.section {
+  &__our-team {
+    background-color: $colorBackground;
+    text-align: center;
+  }
+}
+.grid {
+  &__item {
+    background-color: $colorThird;
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+      0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    border-bottom-left-radius: $borderRadius;
+    border-bottom-right-radius: $borderRadius;
+  }
+  &__team-dsc {
+    padding: 30px 20px 0 20px;
+  }
+  &__team-name {
+    color: $colorPrimary;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: $letterSpacingTitle;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  &__team-job {
+    color: $colorText;
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: $letterSpacingTitle;
+  }
+}
+

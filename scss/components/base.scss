@@ -1,0 +1,39 @@
+@use "../utils/variables" as *;
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--brand-color-black);
+}
+img {
+  display: block;
+}
+textarea {
+  resize: none;
+  font-size: 12px;
+  line-height: $lineHeightTitle;
+  letter-spacing: 0.01em;
+}
+::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.link {
+  list-style-type: none;
+}
+.grid {
+  list-style: none;
+  &__style {
+    display: flex;
+    justify-content: space-around;
+    column-gap: 30px;
+  }
+}

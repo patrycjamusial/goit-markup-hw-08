@@ -1,0 +1,88 @@
+@use "../utils/variables" as *;
+.button {
+  &__modal--open {
+    color: $colorThird;
+    background-color: $colorSecondary;
+    cursor: pointer;
+    font-weight: $fontWeightBold;
+    font-size: 16px;
+    line-height: 1.8;
+    letter-spacing: 0.06em;
+    width: 200px;
+    padding: 10px 0;
+    border-radius: $borderRadius;
+    border: none;
+  }
+  &__modal--close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    right: 0;
+    top: 0;
+    padding: 6px;
+    margin: 8px;
+    position: absolute;
+    color: $colorPrimary;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: $colorThird;
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      color: $colorSecondary;
+      border-color: $colorSecondary;
+    }
+  }
+  &__send {
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 24px 10px 42px;
+    margin: 48px 0 0 0;
+    color: $colorThird;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.8;
+    letter-spacing: 0.06em;
+    background-color: $colorSecondary;
+
+    border: none;
+    border-radius: $borderRadius;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__grid {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
+    padding-bottom: 50px;
+    &-filter {
+      color: $colorPrimary;
+      background-color: $colorBackground;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.6;
+      text-align: center;
+      letter-spacing: $letterSpacingTitle;
+      border: none;
+      padding: 6px 22px 6px 22px;
+      border-radius: $borderRadius;
+      transition-property: color, background-color;
+      transition-duration: $transitionDuration;
+      transition-timing-function: $transitionTimingFunction;
+      &:focus,
+      &:hover {
+        color: $colorThird;
+        background-color: $colorSecondary;
+        box-shadow: 0 3px 1px rgba(0, 0, 0, 0.1),
+          0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+      }
+    }
+  }
+}

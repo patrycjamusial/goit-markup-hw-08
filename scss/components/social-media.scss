@@ -1,0 +1,44 @@
+@use "../utils/variables" as *;
+.social-media {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+  margin: 16px 32px 30px 32px;
+  &__link {
+    fill: $colorIcon;
+    padding: 12px;
+    display: flex;
+    border-radius: 50%;
+    transition-property: fill, background-color, border-radius;
+    transition-duration: $transitionDuration;
+    transition-timing-function: $transitionTimingFunction;
+    &:hover,
+    &:focus {
+      fill: $colorThird;
+      background-color: $colorSecondary;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    &-footer {
+      padding: 12px;
+      fill: $colorThird;
+      background-color: #ffffff10;
+      border-radius: 50%;
+      display: flex;
+      transition-property: fill, background-color, border-radius;
+      transition-duration: $transitionDuration;
+      transition-timing-function: $transitionTimingFunction;
+      &:hover,
+      &:focus {
+        fill: $colorThird;
+        background-color: $colorSecondary;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    }
+  }
+  &__footer {
+    display: flex;
+    column-gap: 10px;
+  }
+}

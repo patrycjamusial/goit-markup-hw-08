@@ -1,0 +1,18 @@
+@use "../utils/variables" as *;
+.imposter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  max-width: 1600px;
+  &__title {
+    color: $colorThird;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.37;
+    letter-spacing: 0.06em;
+    text-align: center;
+    max-width: 696px;
+  }
+}

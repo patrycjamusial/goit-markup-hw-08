@@ -1,0 +1,32 @@
+@use "../utils/variables" as *;
+.newsletter {
+  display: flex;
+  &__title {
+    font-size: 14px;
+    font-weight: $fontWeightBold;
+    line-height: $lineHeightTitle;
+    letter-spacing: $letterSpacingTitle;
+    color: $colorThird;
+    margin-top: 12px;
+  }
+  &__input {
+    color: $colorThird;
+    display: flex;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: $borderRadius;
+    padding: 15px;
+    margin: 20px 12px 94px 0;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    width: 358px;
+    outline: none;
+    &:focus,
+    &:hover {
+      border-color: $colorSecondary;
+    }
+  }
+  &__icon {
+    fill: $colorThird;
+    margin-left: 24px;
+  }
+}

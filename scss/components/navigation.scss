@@ -1,0 +1,41 @@
+@use "../utils/variables" as *;
+.navigation {
+  &__list {
+    list-style-type: none;
+    display: flex;
+    column-gap: 46px;
+    .navigation__link--active {
+      color: $colorSecondary;
+    }
+  }
+  &__link {
+    color: $colorPrimary;
+    position: relative;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.15;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    transition-property: color;
+    transition-duration: $transitionDuration;
+    transition-timing-function: $transitionTimingFunction;
+    &:hover,
+    &:focus {
+      color: $colorSecondary;
+    }
+    &--active {
+      &::after {
+        content: "";
+        position: absolute;
+        background: $colorSecondary;
+        border-radius: 2px;
+        width: 100%;
+        height: 4px;
+        margin-top: 28px;
+        display: block;
+      }
+    }
+  }
+}

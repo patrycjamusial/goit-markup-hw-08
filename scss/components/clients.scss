@@ -1,0 +1,22 @@
+@use "../utils/variables" as *;
+.grid {
+  &__clients-icon {
+    fill: $colorIcon;
+  }
+}
+.link__clients {
+  display: flex;
+  border: 1px solid $colorIcon;
+  border-radius: $borderRadius;
+  padding: 17.71px 32px 14.25px 32px;
+  transition-property: border-color, fill;
+  transition-duration: $transitionDuration;
+  transition-timing-function: $transitionTimingFunction;
+  &:hover,
+  &:focus {
+    border-color: $colorSecondary;
+    .grid__clients-icon {
+      fill: $colorSecondary;
+    }
+  }
+}

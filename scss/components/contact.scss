@@ -1,0 +1,86 @@
+@use "../utils/variables" as *;
+.contact {
+  list-style-type: none;
+  display: flex;
+  column-gap: 30px;
+  &__link-header {
+    display: flex;
+    align-items: center;
+    color: $colorText;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.1;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition-property: color, fill;
+    transition-duration: $transitionDuration;
+    transition-timing-function: $transitionTimingFunction;
+    &:hover,
+    &:focus {
+      color: $colorSecondary;
+      .contact__icon {
+        fill: $colorSecondary;
+      }
+    }
+  }
+  &__link-footer {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    line-height: 1.71;
+    text-decoration: none;
+    letter-spacing: $letterSpacingTitle;
+    display: flex;
+    padding-bottom: 9px;
+    transition-property: color;
+    transition-duration: $transitionDuration;
+    transition-timing-function: $transitionTimingFunction;
+    &:hover,
+    &:focus {
+      color: $colorSecondary;
+    }
+  }
+  &__icon {
+    fill: $colorText;
+    margin-right: 10px;
+    transition-property: fill;
+    transition-duration: $transitionDuration;
+    transition-timing-function: $transitionTimingFunction;
+    &:hover,
+    &:focus {
+      fill: $colorSecondary;
+      cursor: pointer;
+    }
+  }
+  &__footer {
+    background-color: $colorBackgroundSecondary;
+    padding: 60px 0;
+    &-container {
+      display: flex;
+      column-gap: 70px;
+    }
+    &-address {
+      display: flex;
+      flex-direction: column;
+    }
+    &-join-us {
+      justify-content: flex-start;
+      &-title {
+        color: $colorThird;
+        font-weight: $fontWeightBold;
+        font-size: 14px;
+        line-height: $lineHeightTitle;
+        letter-spacing: $letterSpacingTitle;
+        margin-top: 12px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__address {
+    color: $colorThird;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: $letterSpacingTitle;
+    display: flex;
+    padding-bottom: 9px;
+  }
+}

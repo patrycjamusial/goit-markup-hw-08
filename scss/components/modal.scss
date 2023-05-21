@@ -1,0 +1,138 @@
+@use "../utils/variables" as *;
+.modal {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 528px;
+  height: 581px;
+  top: 221px;
+  border-radius: 4px;
+  background-color: $colorThird;
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  transition: 1s ease-in-out;
+  &__title {
+    font-size: 20px;
+    font-weight: $fontWeightBold;
+    line-height: $lineHeightTitle;
+    letter-spacing: $letterSpacingTitle;
+    padding: 40px 40px 12px 40px;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 0 40px 40px 40px;
+    &-input {
+      display: flex;
+      border: 1px solid rgba(33, 33, 33, 0.2);
+      border-radius: $borderRadius;
+      padding: 11px 0 11px 12px;
+      align-items: center;
+      transition-property: border-color;
+      transition-duration: $transitionDuration;
+      transition-timing-function: $transitionTimingFunction;
+      &:focus-within,
+      &:hover {
+        border-color: $colorSecondary;
+      }
+      &:focus-within .modal__icon,
+      &:hover .modal__icon {
+        fill: $colorSecondary;
+      }
+    }
+
+    label span {
+      display: flex;
+      font-size: 12px;
+      line-height: $lineHeightTitle;
+      letter-spacing: 0.01em;
+      color: $colorText;
+      margin-bottom: 4px;
+    }
+    .button__send {
+      display: flex;
+      justify-content: center;
+      width: 200px;
+      padding: 0;
+      margin: 0 0 0 120px;
+    }
+  }
+  &__icon {
+    display: block;
+    fill: $colorPrimary;
+    transition-property: fill;
+    transition-duration: $transitionDuration;
+    transition-timing-function: $transitionTimingFunction;
+  }
+  &__input {
+    border: none;
+    outline: none;
+    margin-left: 12px;
+    width: 420px;
+  }
+}
+.backdrop {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  &__is-hidden {
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: 1s ease-out;
+    .modal {
+      transform: scale(0);
+      opacity: 0;
+    }
+  }
+}
+.checkbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 18px 14px 22px 14px;
+  &__input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip: rect(1px 1px 1px 1px);
+    &:checked + .checkbox__label {
+      background-color: $colorSecondary;
+      border: 0.2px solid $colorThird;
+      border-radius: 2px;
+    }
+  }
+  &__label {
+    position: relative;
+    border: 2px solid $colorPrimary;
+    border-radius: 2px;
+    width: 16px;
+    height: 15px;
+    &:focus,
+    &:hover {
+      border-color: $colorSecondary;
+    }
+  }
+  &__icon {
+    position: absolute;
+    top: 2px;
+    left: 1px;
+    fill: $colorThird;
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $colorText;
+    padding-left: 8px;
+  }
+  &__link {
+    color: $colorSecondary;
+  }
+}

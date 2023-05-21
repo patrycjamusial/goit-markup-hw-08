@@ -1,0 +1,23 @@
+@use "../utils/variables" as *;
+.grid {
+  &__strengths-icon {
+    padding: 25px 100px;
+    margin-bottom: 30px;
+    border-radius: $borderRadius;
+    background-color: $colorBackground;
+  }
+  &__strengths-name {
+    color: $colorPrimary;
+    font-weight: $fontWeightBold;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: $letterSpacingTitle;
+    padding-bottom: 10px;
+  }
+  &__strengths-text {
+    color: $colorText;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: $letterSpacingTitle;
+  }
+}
