@@ -1,0 +1,141 @@
+@use "../utils/variables" as *;
+.menu-toggle {
+  background: none;
+  border: none;
+}
+
+@media screen and (max-width: 767px) {
+  .navigation,
+  .contact {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  width: 100vw;
+  height: 100vh;
+  background-color: $colorThird;
+  transform: translateY(-100%);
+  transition: transform $transitionDuration $transitionTimingFunction;
+
+  &.is-open {
+    transform: translateY(0);
+  }
+
+  & .menu-toggle {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+  }
+
+  &__icon {
+    color: $colorPrimary;
+    cursor: pointer;
+    transition-property: fill;
+    transition-duration: $transitionDuration;
+    transition-timing-function: $transitionTimingFunction;
+  }
+
+  &__icon:hover {
+    color: $colorSecondary;
+  }
+
+  &__icon--close {
+    transition-property: transform;
+    transition-duration: 1000ms;
+    transition-timing-function: ease;
+  }
+
+  &__content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $colorThird;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-left: 40px;
+    overflow-y: auto;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: 0.02em;
+    color: $colorPrimary;
+  }
+
+  &__link:hover {
+    color: $colorSecondary;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__tel {
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+
+  &__tel--link {
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 40px;
+    letter-spacing: 0.02em;
+    color: $colorSecondary;
+  }
+
+  &__mail {
+    margin-bottom: 64px;
+  }
+
+  &__mail--link {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    color: $colorText;
+  }
+
+  &__socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  &__socials--item {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    padding-right: 10px;
+  }
+
+  &__socials--item:last-child {
+    border: none;
+  }
+
+  &__socials--link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    color: $colorSecondary;
+  }
+}

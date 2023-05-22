@@ -1,11 +1,37 @@
 @use "../utils/variables" as *;
+@use "../utils/mixins" as *;
 .contact {
-  @media (max-width: 767px) {
-    display: none;
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    list-style-type: none;
+    margin: 21px 0;
+    &__link-header {
+      display: flex;
+      align-items: center;
+      color: $colorText;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.1;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition-property: color, fill;
+      transition-duration: $transitionDuration;
+      transition-timing-function: $transitionTimingFunction;
+      &:hover,
+      &:focus {
+        color: $colorSecondary;
+        .contact__icon {
+          fill: $colorSecondary;
+        }
+      }
+    }
   }
-  @media (min-width: 768px) {
+  @include desktop {
     list-style-type: none;
     display: flex;
+    flex-direction: row;
     column-gap: 30px;
     &__link-header {
       display: flex;
