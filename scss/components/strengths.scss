@@ -1,5 +1,15 @@
 @use "../utils/variables" as *;
+@use "../utils/mixins" as *;
 .grid {
+  &__strenghts-item {
+    width: 450px;
+    @include tablet {
+      width: 354px;
+    }
+    @include desktop {
+      width: 270px;
+    }
+  }
   &__strengths-icon {
     padding: 25px 190px;
     margin-bottom: 30px;

@@ -1,8 +1,16 @@
 @use "../utils/variables" as *;
+@use "../utils/mixins" as *;
 .section {
   &__our-team {
+    width: 480px;
     background-color: $colorBackground;
     text-align: center;
+    @include tablet {
+      width: 768px;
+    }
+    @include desktop {
+      width: 1600px;
+    }
   }
 }
 .grid {
@@ -32,4 +40,3 @@
     letter-spacing: $letterSpacingTitle;
   }
 }
-
