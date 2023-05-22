@@ -1,28 +1,34 @@
 @use "../utils/variables" as *;
 .contact {
-  list-style-type: none;
-  display: flex;
-  column-gap: 30px;
-  &__link-header {
+  @media (max-width: 767px) {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    list-style-type: none;
     display: flex;
-    align-items: center;
-    color: $colorText;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.1;
-    text-decoration: none;
-    letter-spacing: 0.02em;
-    transition-property: color, fill;
-    transition-duration: $transitionDuration;
-    transition-timing-function: $transitionTimingFunction;
-    &:hover,
-    &:focus {
-      color: $colorSecondary;
-      .contact__icon {
-        fill: $colorSecondary;
+    column-gap: 30px;
+    &__link-header {
+      display: flex;
+      align-items: center;
+      color: $colorText;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.1;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition-property: color, fill;
+      transition-duration: $transitionDuration;
+      transition-timing-function: $transitionTimingFunction;
+      &:hover,
+      &:focus {
+        color: $colorSecondary;
+        .contact__icon {
+          fill: $colorSecondary;
+        }
       }
     }
   }
+
   &__link-footer {
     color: rgba(255, 255, 255, 0.6);
     font-size: 14px;

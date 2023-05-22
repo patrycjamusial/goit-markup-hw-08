@@ -1,9 +1,17 @@
 @use "../utils/variables" as *;
+@use "../utils/mixins" as *;
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 480px;
   margin: 0 auto;
   padding: 0 15px;
+
+  @include tablet {
+    max-width: 768px;
+  }
+  @include desktop {
+    max-width: 1200px;
+  }
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -33,7 +41,24 @@ textarea {
   list-style: none;
   &__style {
     display: flex;
-    justify-content: space-around;
-    column-gap: 30px;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  @media (min-width: 768px) and (max-width: 1199px) {
+    .grid {
+      &__style {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+  }
+  @media (min-width: 1200px) {
+    .grid {
+      &__style {
+        display: flex;
+        justify-content: space-around;
+      }
+    }
   }
 }
