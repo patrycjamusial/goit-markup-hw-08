@@ -146,75 +146,6 @@
           >
             Zamów usługe
           </button>
-          <div class="backdrop backdrop__is-hidden" data-modal>
-            <div class="modal">
-              <h3 class="modal__title">
-                Zostaw swoje dane w formularzu poniżej
-              </h3>
-              <form class="modal__form">
-                <label>
-                  <span>Imię</span>
-                  <span class="modal__form-input">
-                    <svg width="18px" height="18px" class="modal__icon">
-                      <use href="./images/icons.svg#icon-person-black"></use>
-                    </svg>
-                    <input type="text" name="name" class="modal__input" />
-                  </span>
-                </label>
-                <label
-                  ><span>Telefon</span>
-                  <span class="modal__form-input">
-                    <svg width="18px" height="18px" class="modal__icon">
-                      <use href="./images/icons.svg#icon-phone-black"></use>
-                    </svg>
-                    <input type="tel" name="telephone" class="modal__input" />
-                  </span>
-                </label>
-                <label
-                  ><span>E-mail</span>
-                  <span class="modal__form-input">
-                    <svg width="18px" height="18px" class="modal__icon">
-                      <use href="./images/icons.svg#icon-email-black"></use>
-                    </svg>
-                    <input type="email" name="email" class="modal__input" />
-                  </span>
-                </label>
-                <label
-                  ><span>Komentarz</span>
-                  <span class="modal__form-input">
-                    <textarea
-                      name="comment"
-                      rows="6"
-                      placeholder="Wprowadź tekst"
-                      class="modal__input"
-                    ></textarea>
-                  </span>
-                </label>
-                <div class="checkbox">
-                  <input
-                    type="checkbox"
-                    id="check"
-                    name="checkbox"
-                    class="checkbox__input"
-                  />
-                  <label class="checkbox__label" for="check"
-                    ><svg width="13px" height="10px" class="checkbox__icon">
-                      <use href="./images/icons.svg#icon-checkbox"></use>
-                    </svg>
-                  </label>
-                  <p class="checkbox__text">
-                    Oświadczam iż akceptuję
-                    <a href="#" class="checkbox__link">Regulamin</a> i
-                    <a href="#" class="checkbox__link">Politykę Prywatności.</a>
-                  </p>
-                </div>
-                <button type="submit" class="button button__send">
-                  Wyślij
-                </button>
-              </form>
-              <button class="button__modal--close" data-modal-close>X</button>
-            </div>
-          </div>
         </div>
       </section>
       <section class="section">
@@ -567,13 +498,65 @@
         </form>
       </div>
     </footer>
+    <div class="backdrop backdrop__is-hidden" data-modal>
+      <div class="modal">
+        <h3 class="modal__title">Zostaw swoje dane w formularzu poniżej</h3>
+        <form class="modal__form">
+          <label>
+            Imię
+            <svg width="18px" height="18px" class="modal__icon">
+              <use href="./images/icons.svg#icon-person-black"></use>
+            </svg>
+            <input type="text" name="name" class="modal__input" />
+          </label>
+          <label>
+            Telefon
+            <svg width="18px" height="18px" class="modal__icon">
+              <use href="./images/icons.svg#icon-phone-black"></use>
+            </svg>
+            <input type="tel" name="telephone" class="modal__input" />
+          </label>
+          <label>
+            E-mail
+            <svg width="18px" height="18px" class="modal__icon">
+              <use href="./images/icons.svg#icon-email-black"></use>
+            </svg>
+            <input type="email" name="email" class="modal__input" />
+          </label>
+          <label
+            >Komentarz
+
+            <textarea
+              name="comment"
+              rows="6"
+              placeholder="Wprowadź tekst"
+              class="modal__input"
+            ></textarea>
+          </label>
+          <div class="checkbox">
+            <input
+              type="checkbox"
+              id="check"
+              name="checkbox"
+              class="checkbox__input"
+            />
+            <label class="checkbox__label" for="check"
+              ><svg width="13px" height="10px" class="checkbox__icon">
+                <use href="./images/icons.svg#icon-checkbox"></use>
+              </svg>
+            </label>
+            <p class="checkbox__text">
+              Oświadczam iż akceptuję
+              <a href="#" class="checkbox__link">Regulamin</a> i
+              <a href="#" class="checkbox__link">Politykę Prywatności.</a>
+            </p>
+          </div>
+          <button type="submit" class="button button__send">Wyślij</button>
+        </form>
+        <button class="button__modal--close" data-modal-close>X</button>
+      </div>
+    </div>
     <script src="./js/modal.js"></script>
-    <script
-      defer
-      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
-      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
-      crossorigin="anonymous"
-    ></script>
     <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
