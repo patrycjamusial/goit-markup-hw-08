@@ -2,6 +2,10 @@
 .menu-toggle {
   background: none;
   border: none;
+  &:hover .mobile-menu__icon,
+  &:focus .mobile-menu__icon {
+    fill: $colorSecondary;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -41,7 +45,7 @@
   &__icon {
     color: $colorPrimary;
     cursor: pointer;
-    transition-property: fill;
+    transition-property: color;
     transition-duration: $transitionDuration;
     transition-timing-function: $transitionTimingFunction;
   }
@@ -54,6 +58,10 @@
     transition-property: transform;
     transition-duration: 1000ms;
     transition-timing-function: ease;
+    &:hover,
+    &:focus {
+      color: $colorSecondary;
+    }
   }
 
   &__content {
@@ -80,10 +88,10 @@
     line-height: 47px;
     letter-spacing: 0.02em;
     color: $colorPrimary;
-  }
-
-  &__link:hover {
-    color: $colorSecondary;
+    &:hover,
+    &:focus {
+      color: $colorSecondary;
+    }
   }
 
   &__contacts {
