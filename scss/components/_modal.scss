@@ -43,14 +43,6 @@
       }
     }
 
-    label span {
-      display: flex;
-      font-size: 12px;
-      line-height: $lineHeightTitle;
-      letter-spacing: 0.01em;
-      color: $colorText;
-      margin-bottom: 4px;
-    }
     .button__send {
       display: flex;
       justify-content: center;

@@ -24,14 +24,14 @@
     padding: 6px;
     margin: 8px;
     position: absolute;
-    color: $colorPrimary;
+    fill: $colorPrimary;
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: $colorThird;
     &:hover,
     &:focus {
       cursor: pointer;
-      color: $colorSecondary;
+      fill: $colorSecondary;
       border-color: $colorSecondary;
     }
   }
