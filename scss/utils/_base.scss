@@ -1,7 +1,7 @@
 @use "./variables" as *;
 .container {
-  width: 100%;
   max-width: 480px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 15px;
 
@@ -45,17 +45,9 @@ textarea {
     flex-wrap: wrap;
     gap: 30px;
   }
-  @media (min-width: 768px) {
-    .grid {
-      &__style {
-        display: flex;
-      }
-    }
-  }
   @media (min-width: 1200px) {
     .grid {
       &__style {
-        display: flex;
         flex-wrap: nowrap;
         justify-content: space-around;
       }

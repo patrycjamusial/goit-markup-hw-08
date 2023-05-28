@@ -1,6 +1,7 @@
 @use "../utils/_variables" as *;
 .newsletter {
   display: flex;
+  flex-direction: column;
   &__title {
     font-size: 14px;
     font-weight: $fontWeightBold;

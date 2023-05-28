@@ -82,30 +82,20 @@
       cursor: pointer;
     }
   }
-  &__footer {
-    background-color: $colorBackgroundSecondary;
-    padding: 60px 0;
-    &-container {
-      display: flex;
-      column-gap: 70px;
+}
+.contact-footer {
+  background-color: $colorBackgroundSecondary;
+  padding: 60px 0;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    column-gap: 70px;
+    @media (min-width: 768px) {
     }
-    &-address {
-      list-style-type: none;
-      font-style: normal;
-      display: flex;
-      flex-direction: column;
-    }
-    &-join-us {
-      justify-content: flex-start;
-      &-title {
-        color: $colorThird;
-        font-weight: $fontWeightBold;
-        font-size: 14px;
-        line-height: $lineHeightTitle;
-        letter-spacing: $letterSpacingTitle;
-        margin-top: 12px;
-        margin-bottom: 20px;
-      }
+    @media (min-width: 1200px) {
+      flex-direction: row;
     }
   }
   &__address {
@@ -115,5 +105,23 @@
     letter-spacing: $letterSpacingTitle;
     display: flex;
     padding-bottom: 9px;
+  }
+  &__list {
+    list-style-type: none;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+  }
+  &__join-us {
+    justify-content: flex-start;
+    &-title {
+      color: $colorThird;
+      font-weight: $fontWeightBold;
+      font-size: 14px;
+      line-height: $lineHeightTitle;
+      letter-spacing: $letterSpacingTitle;
+      margin-top: 12px;
+      margin-bottom: 20px;
+    }
   }
 }

@@ -10,7 +10,9 @@
     }
   }
   &__strengths-icon {
-    padding: 25px 190px;
+    display: flex;
+    justify-content: center;
+    padding: 25px;
     margin-bottom: 30px;
     border-radius: $borderRadius;
     background-color: $colorBackground;
@@ -28,17 +30,5 @@
     font-size: 14px;
     line-height: 1.7;
     letter-spacing: $letterSpacingTitle;
-  }
-}
-@media (min-width: 768px) {
-  .grid__strenghts-icon {
-    padding: 25px 142px;
-  }
-}
-@media (min-width: 1200px) {
-  .grid {
-    &__strengths-icon {
-      padding: 25px 100px;
-    }
   }
 }

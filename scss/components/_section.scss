@@ -2,6 +2,14 @@
 .section {
   padding-top: $sectionPadding;
   padding-bottom: $sectionPadding;
+  @media (min-width: 768px) {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+  @media (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
   &__title {
     color: $colorPrimary;
     font-weight: $fontWeightBold;
@@ -10,17 +18,62 @@
     letter-spacing: $letterSpacingTitle;
     text-align: center;
     margin-bottom: $marginBottomTitle;
+    @media (min-width: 768px) {
+      margin-bottom: 30px;
+    }
+    @media (min-width: 1200px) {
+      margin-bottom: 50px;
+      font-size: 36px;
+    }
+    &--work {
+      display: none;
+      @media (min-width: 768px) {
+        display: none;
+      }
+      @media (min-width: 1200px) {
+        display: block;
+        align-items: center;
+      }
+    }
   }
   &__heading {
-    background-image: url("/goit-markup-hw-04/images/baner.jpg"),
+    background-image: url("../images/baner-tel-1x.jpg"),
       linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
     text-align: center;
-    padding: 200px 0;
+    padding: 118px 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url("../images/baner-tel-2x.jpg"),
+        linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+    }
+    @media (min-width: 768px) {
+      background-image: url("../images/baner-tab-1x.jpg"),
+        linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+      @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url("../images/baner-tab-2x.jpg"),
+          linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+      }
+    }
+    @media (min-width: 1200px) {
+      background-image: url("../images/baner-des-1x.jpg"),
+        linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+      @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url("../images/baner-des-2x.jpg"),
+          linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+        padding: 200px 0;
+      }
+    }
   }
   &--work {
     padding-top: 0;

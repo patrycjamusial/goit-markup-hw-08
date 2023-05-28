@@ -1,18 +1,20 @@
 @use "../utils/_variables" as *;
-.section {
-  &__our-team {
-    width: 480px;
-    background-color: $colorBackground;
-    text-align: center;
+
+.grid {
+  &__team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
     @media (min-width: 768px) {
-      width: 768px;
+      flex-direction: row;
+      flex-wrap: wrap;
     }
     @media (min-width: 1200px) {
-      width: 1200px;
+      flex-wrap: nowrap;
     }
   }
-}
-.grid {
   &__item {
     background-color: $colorThird;
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
@@ -36,6 +38,7 @@
     color: $colorText;
     font-size: 16px;
     line-height: 1.19;
+    text-align: center;
     letter-spacing: $letterSpacingTitle;
   }
 }

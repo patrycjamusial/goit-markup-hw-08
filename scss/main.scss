@@ -1,4 +1,5 @@
 @use "./utils/_variables" as *;
+@use "./utils/base";
 @use "./components/_clients";
 @use "./components/_our-work";
 @use "./components/_our-team";
@@ -7,7 +8,6 @@
 @use "./components/_logo";
 @use "./components/_navigation";
 @use "./components/_contact";
-@use "./components/_base";
 @use "./components/_imposter";
 @use "./components/_section";
 @use "./components/_modal";

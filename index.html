@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <!-- <header class="page-header">
+    <header class="page-header">
       <div class="container page-header__menu">
         <div class="page-header__navigation">
           <a href="index.html" class="logo--header"
@@ -132,8 +132,8 @@
           </div>
         </div>
       </div>
-    </header> -->
-    <!-- <main>
+    </header>
+    <main>
       <section class="section section__heading">
         <div class="container imposter">
           <h1 class="imposter__title">
@@ -147,8 +147,8 @@
             Zamów usługe
           </button>
         </div>
-      </section> -->
-    <!-- <section class="section">
+      </section>
+      <section class="section">
         <div class="container">
           <ul class="grid grid__style">
             <li class="grid__strenghts-item">
@@ -201,52 +201,61 @@
             </li>
           </ul>
         </div>
-      </section> -->
-    <section class="section--work section">
-      <div class="container">
-        <h2 class="section__title">Czym się zajmujemy</h2>
-        <ul class="grid__work">
-          <li class="grid__work-img">
-            <img
-              src="images/klawiatura.jpg"
-              alt="kodowanie stron internetowych"
-              width="370"
-              height="294"
-            />
-            <p class="grid__work-dsc">APLIKACJE KOMPUTEROWE</p>
-          </li>
-          <li class="grid__work-img">
-            <img
-              src="images/laptop.jpg"
-              alt="tworzenie aplikacji mobilnych"
-              width="370"
-              height="294"
-            />
-            <p class="grid__work-dsc">APLIKACJE MOBILNE</p>
-          </li>
-          <li class="grid__work-img">
-            <img
-              src="images/tablet.jpg"
-              alt="projektowanie graficzne"
-              width="370"
-              height="294"
-            />
-            <p class="grid__work-dsc">ROZWIĄZANIA GRAFICZNE</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <!-- <section class="section section__our-team">
+      </section>
+      <section class="section--work section">
+        <div class="container">
+          <h2 class="section__title--work section__title">
+            Czym się zajmujemy
+          </h2>
+          <ul class="grid__work">
+            <li class="grid__work-img">
+              <img
+                src="images/klawiatura.jpg"
+                alt="kodowanie stron internetowych"
+                width="370"
+                height="294"
+              />
+              <p class="grid__work-dsc">APLIKACJE KOMPUTEROWE</p>
+            </li>
+            <li class="grid__work-img">
+              <img
+                src="images/laptop.jpg"
+                alt="tworzenie aplikacji mobilnych"
+                width="370"
+                height="294"
+              />
+              <p class="grid__work-dsc">APLIKACJE MOBILNE</p>
+            </li>
+            <li class="grid__work-img">
+              <img
+                src="images/tablet.jpg"
+                alt="projektowanie graficzne"
+                width="370"
+                height="294"
+              />
+              <p class="grid__work-dsc">ROZWIĄZANIA GRAFICZNE</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="section section__our-team">
         <div class="container">
           <h2 class="section__title">Nasz zespół</h2>
-          <ul class="grid grid__style">
+          <ul class="grid grid__team">
             <li class="grid__item">
               <figure class="grid__team-img">
                 <img
-                  src="images/product-designer.jpg"
+                  src="images/product-designer-450-1x.jpg"
                   alt="osoba obejmujaca stanowisko product-designer"
-                  width="270"
-                  height="260"
+                  srcset="
+                    images/product-designer-450-1x.jpg 450w,
+                    images/product-designer-450-2x.jpg 900w,
+                    images/product-designer-354-1x.jpg 354w,
+                    images/product-designer-354-2x.jpg 708w,
+                    images/product-designer-270-1x.jpg 270w,
+                    images/product-designer-270-2x.jpg 540w
+                  "
+                  sizes="(min-width: 768px) 354px, (min-width: 1200px) 270px, 100vw"
                 />
                 <figcaption class="grid__team-dsc">
                   <h3 class="grid__team-name">John Doe</h3>
@@ -287,10 +296,17 @@
             <li class="grid__item">
               <figure class="grid__team-img">
                 <img
-                  src="images/frontend-developer.jpg"
+                  src="images/frontend-developer-450-1x.jpg"
                   alt="osoba obejmujaca stanowisko frontend-developer"
-                  width="270"
-                  height="260"
+                  srcset="
+                    images/frontend-developer-450-1x.jpg 450w,
+                    images/frontend-developer-450-2x.jpg 900w,
+                    images/frontend-developer-354-1x.jpg 354w,
+                    images/frontend-developer-354-2x.jpg 708w,
+                    images/frontend-developer-270-1x.jpg 270w,
+                    images/frontend-developer-270-2x.jpg 540w
+                  "
+                  sizes="(min-width: 768px) 354px, (min-width: 1200px) 270px, 100vw"
                 />
                 <figcaption class="grid__team-dsc">
                   <h3 class="grid__team-name">John Doe</h3>
@@ -331,10 +347,17 @@
             <li class="grid__item">
               <figure class="grid__team-img">
                 <img
-                  src="images/marketing.jpg"
+                  src="images/marketing-450-1x.jpg"
                   alt="osoba zajmujaca sie dzialem marketingu"
-                  width="270"
-                  height="260"
+                  srcset="
+                    images/marketing-450-1x.jpg 450w,
+                    images/marketing-450-2x.jpg 900w,
+                    images/marketing-354-1x.jpg 354w,
+                    images/marketing-354-2x.jpg 708w,
+                    images/marketing-270-1x.jpg 270w,
+                    images/marketing-270-1x.jpg 540w
+                  "
+                  sizes="(min-width: 768px) 354px, (min-width: 1200px) 270px, 100vw"
                 />
                 <figcaption class="grid__team-dsc">
                   <h3 class="grid__team-name">John Doe</h3>
@@ -375,10 +398,17 @@
             <li class="grid__item">
               <figure class="grid__team-img">
                 <img
-                  src="images/ui-designer.jpg"
+                  src="images/ui-designer-450-1x.jpg"
                   alt="osoba obejmujaca stanowisko ui-designer"
-                  width="270"
-                  height="260"
+                  srcset="
+                    images/ui-designer-450-1x.jpg 450w,
+                    images/ui-designer-450-2x.jpg 900w,
+                    images/ui-designer-354-1x.jpg 354w,
+                    images/ui-designer-354-2x.jpg 708w,
+                    images/ui-designer-270-1x.jpg 270w,
+                    images/ui-designer-270-2x.jpg 540w
+                  "
+                  sizes="(min-width: 768px) 354px, (min-width: 1200px) 270px, 100vw"
                 />
                 <figcaption class="grid__team-dsc">
                   <h3 class="grid__team-name">John Doe</h3>
@@ -418,8 +448,8 @@
             </li>
           </ul>
         </div>
-      </section> -->
-    <!-- <section class="section">
+      </section>
+      <section class="section">
         <div class="container">
           <h2 class="section__title">Nasi klienci</h2>
           <ul class="grid grid__style">
@@ -468,15 +498,15 @@
           </ul>
         </div>
       </section>
-    </main> -->
-    <!-- <footer class="contact-footer">
+    </main>
+    <footer class="contact-footer">
       <div class="container contact-footer__container">
         <div>
           <a href="index.html" class="logo--footer"
             ><span class="logo">Web</span>Studio</a
           >
           <address>
-            <ul class="contact-footer__address">
+            <ul class="contact-footer__list">
               <li class="contact-footer__address">
                 m. Warszawa, Aleje Jerozolimskie 21
               </li>
@@ -493,8 +523,8 @@
             </ul>
           </address>
         </div>
-        <div class="contact__footer-join-us">
-          <h3 class="contact__footer-join-us-title">DOŁĄCZ DO NAS</h3>
+        <div class="contact-footer__join-us">
+          <h3 class="contact-footer__join-us-title">DOŁĄCZ DO NAS</h3>
           <ul class="social-media__footer">
             <li>
               <a href="#" class="social-media__link-footer"
@@ -543,8 +573,8 @@
           </button>
         </form>
       </div>
-    </footer> -->
-    <!-- <div class="backdrop backdrop__is-hidden" data-modal>
+    </footer>
+    <div class="backdrop backdrop__is-hidden" data-modal>
       <div class="modal">
         <h3 class="modal__title">Zostaw swoje dane w formularzu poniżej</h3>
         <form class="modal__form">
@@ -604,7 +634,7 @@
           </svg>
         </button>
       </div>
-    </div> -->
+    </div>
     <script src="./js/modal.js"></script>
     <script src="./js/mobile-menu.js"></script>
   </body>
