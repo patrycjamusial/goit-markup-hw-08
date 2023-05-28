@@ -1,5 +1,4 @@
-@use "../utils/variables" as *;
-@use "../utils/mixins" as *;
+@use "../utils/_variables" as *;
 .modal {
   position: absolute;
   display: flex;
@@ -13,11 +12,14 @@
     0 1px 3px 0 rgba(0, 0, 0, 0.12);
   transition: 1s ease-in-out;
   &__title {
+    display: flex;
+    justify-content: center;
     font-size: 20px;
     font-weight: $fontWeightBold;
     line-height: $lineHeightTitle;
     letter-spacing: $letterSpacingTitle;
-    padding: 40px 40px 12px 40px;
+    padding-top: 40px;
+    margin-bottom: 12px;
   }
   &__form {
     display: flex;
@@ -25,22 +27,14 @@
     row-gap: 10px;
     padding: 0 40px 40px 40px;
     &-input {
+      font-size: 12px;
+      line-height: $lineHeightTitle;
+      letter-spacing: 0.01em;
+      color: $colorText;
+      position: relative;
       display: flex;
-      border: 1px solid rgba(33, 33, 33, 0.2);
-      border-radius: $borderRadius;
-      padding: 11px 0 11px 12px;
-      align-items: center;
-      transition-property: border-color;
-      transition-duration: $transitionDuration;
-      transition-timing-function: $transitionTimingFunction;
-      &:focus-within,
-      &:hover {
-        border-color: $colorSecondary;
-      }
-      &:focus-within .modal__icon,
-      &:hover .modal__icon {
-        fill: $colorSecondary;
-      }
+      flex-direction: column;
+      row-gap: 4px;
     }
 
     .button__send {
@@ -51,20 +45,35 @@
       margin: 0 0 0 120px;
     }
   }
-  &__icon {
+  &__form-input > &__icon {
+    position: absolute;
+    top: 28px;
+    left: 12px;
     display: block;
-    fill: $colorPrimary;
-    transition-property: fill;
-    transition-duration: $transitionDuration;
-    transition-timing-function: $transitionTimingFunction;
   }
   &__input {
-    border: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: $borderRadius;
+    padding: 11px 0 11px 36px;
     outline: none;
-    margin-left: 12px;
-    width: 420px;
+    width: 100%;
+    transition-property: border-color, fill;
+    transition-duration: $transitionDuration;
+    transition-timing-function: $transitionTimingFunction;
+    &:focus-within,
+    &:hover {
+      border-color: $colorSecondary;
+    }
+    &:focus-within .modal__icon,
+    &:hover .modal__icon {
+      fill: $colorSecondary;
+    }
+  }
+  &__icon {
+    fill: $colorPrimary;
   }
 }
+
 .backdrop {
   width: 480px;
   position: absolute;

@@ -1,4 +1,4 @@
-@use "../utils/variables" as *;
+@use "../utils/_variables" as *;
 .menu-toggle {
   background: none;
   border: none;
@@ -8,14 +8,14 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .navigation,
   .contact {
     display: none;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .menu-toggle {
     display: none;
   }

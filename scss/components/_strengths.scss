@@ -1,12 +1,11 @@
-@use "../utils/variables" as *;
-@use "../utils/mixins" as *;
+@use "../utils/_variables" as *;
 .grid {
   &__strenghts-item {
     width: 450px;
-    @include tablet {
+    @media (min-width: 768px) {
       width: 354px;
     }
-    @include desktop {
+    @media (min-width: 1200px) {
       width: 270px;
     }
   }
@@ -31,7 +30,7 @@
     letter-spacing: $letterSpacingTitle;
   }
 }
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 768px) {
   .grid__strenghts-icon {
     padding: 25px 142px;
   }

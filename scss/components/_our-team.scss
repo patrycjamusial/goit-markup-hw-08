@@ -1,14 +1,13 @@
-@use "../utils/variables" as *;
-@use "../utils/mixins" as *;
+@use "../utils/_variables" as *;
 .section {
   &__our-team {
     width: 480px;
     background-color: $colorBackground;
     text-align: center;
-    @include tablet {
+    @media (min-width: 768px) {
       width: 768px;
     }
-    @include desktop {
+    @media (min-width: 1200px) {
       width: 1200px;
     }
   }

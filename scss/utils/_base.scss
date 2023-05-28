@@ -1,21 +1,20 @@
-@use "../utils/variables" as *;
-@use "../utils/mixins" as *;
+@use "./variables" as *;
 .container {
   width: 100%;
   max-width: 480px;
   margin: 0 auto;
   padding: 0 15px;
 
-  @include tablet {
+  @media (min-width: 768px) {
     max-width: 768px;
   }
-  @include desktop {
+  @media (min-width: 1200px) {
     max-width: 1200px;
   }
 }
 body {
   font-family: "Roboto", sans-serif;
-  color: var(--brand-color-black);
+  color: $colorPrimary;
 }
 img {
   display: block;
@@ -46,7 +45,7 @@ textarea {
     flex-wrap: wrap;
     gap: 30px;
   }
-  @media (min-width: 768px) and (max-width: 1199px) {
+  @media (min-width: 768px) {
     .grid {
       &__style {
         display: flex;

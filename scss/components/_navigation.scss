@@ -1,7 +1,6 @@
-@use "../utils/variables" as *;
-@use "../utils/mixins" as *;
+@use "../utils/_variables" as *;
 .navigation {
-  @include tablet {
+  @media (min-width: 768px) {
     .navigation {
       &__list {
         list-style-type: none;
@@ -43,7 +42,7 @@
       }
     }
   }
-  @include desktop {
+  @media (min-width: 1200px) {
     .navigation {
       &__list {
         list-style-type: none;
