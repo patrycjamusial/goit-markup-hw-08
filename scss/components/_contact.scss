@@ -86,16 +86,25 @@
 .contact-footer {
   background-color: $colorBackgroundSecondary;
   padding: 60px 0;
+  &__logo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+    @media (min-width: 1200px) {
+      align-items: flex-start;
+    }
+  }
   &__container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    column-gap: 70px;
-    @media (min-width: 768px) {
-    }
+    gap: 60px;
     @media (min-width: 1200px) {
       flex-direction: row;
+      align-items: flex-start;
+      gap: 70px;
     }
   }
   &__address {
@@ -111,9 +120,16 @@
     font-style: normal;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    @media (min-width: 1200px) {
+      align-items: flex-start;
+    }
   }
   &__join-us {
     justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     &-title {
       color: $colorThird;
       font-weight: $fontWeightBold;
